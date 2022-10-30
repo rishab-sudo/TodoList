@@ -31,14 +31,16 @@ const Form = ({input,setInput,todos,setTodos,editTodo,setEditTodo}) => {
         }
     };
   return (
-    <form onSubmit={onFormSubmit}>
-        <input type="text" 
+    <form onSubmit={onFormSubmit} style={{display:"flex"}}>
+        <textarea type="text" 
         placeholder='Enter a Todo' 
-        className='task_input'
+        className='todo_input'
         value={input}
         required
         onChange={onInputChange}
-        />
+        >
+          </textarea>
+
     
     <button className='button_add'
      type="submit" >

@@ -25,9 +25,10 @@ const TodoList = ({todos,setTodos,editTodo,setEditTodo}) => {
         {todos.map((todo)=>(
           <li className='list_item' key={todo.id}>
             <input
+            id="output"
             type="text"
             value={todo.title}
-            className={`list $ {todo.completed ? "complete" :""}`}
+            className={`list${todo.completed ?"complete":""}`}
             onChange={(event)=> event.preventDefault()}
             />
           <div>
